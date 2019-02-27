@@ -47,11 +47,11 @@ def gcs_dowload_file(gcs_bucket, target, destination):
     blob = bucket.get_blob(target)
     print(blob)
     blob.download_to_filename(destination)
-    log.info("Downloaded")
+    print("Downloaded")
 
 def gcs_upload_file(gcs_bucket, filename, bucket_filename):
     client2 = get_storage_client()
     bucket2 = client2.get_bucket(gcs_bucket)
     blob2 = bucket2.blob(bucket_filename)
     blob2.upload_from_filename(filename)
-    log.info("Uploaded")
+    print("Uploaded")

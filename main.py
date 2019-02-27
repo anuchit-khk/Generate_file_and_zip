@@ -7,17 +7,18 @@ import argparse
 
 if __name__ == "__main__":
 
-    #ag = argparse.ArgumentParser()
-    #ag.add_argument('--version', type=str, default="1.0.0")
-    #args = ag.parse_args()
+    ag = argparse.ArgumentParser()
+    ag.add_argument('--version', type=str, default="1.0.0")
+    args = ag.parse_args()
 
-    #if args.version:
-    #    version = args.version
-    #oat("C:/Users/Anuchit/Desktop/kowoatkowoatz", version)
+    if args.version:
+        version = args.version
+    oat("C:/Users/Anuchit/Desktop/kowoatkowoatz", version)
 
-    #zipf = zipfile.ZipFile('C:/Users/Anuchit/Desktop/kowoatz.zip', 'w')
-    #zipdir('C:/Users/Anuchit/Desktop/kowoatkowoatz', zipf)
+    zipf = zipfile.ZipFile('C:/Users/Anuchit/Desktop/kowoatz.zip', 'w')
+    zipdir('C:/Users/Anuchit/Desktop/kowoatkowoatz', zipf)
 
+    #1 .Bucketname 2. path/of/remotefile 3. download target
     gcs_bucket = "dmp_recommendation_dev"
     gcs_dowload_file(gcs_bucket, "kowoatz/abc.zip", "C:/Users/Anuchit/Desktop/defg.zip")
 
